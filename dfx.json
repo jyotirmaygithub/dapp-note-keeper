@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "notes-keeper-backend": {
+      "candid": "src/notes-keeper-backend/notes-keeper-backend.did",
+      "package": "notes-keeper-backend",
+      "type": "rust"
+    },
+    "notes-keeper-frontend": {
+      "dependencies": [
+        "notes-keeper-backend"
+      ],
+      "source": [
+        "src/notes-keeper-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "notes-keeper-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

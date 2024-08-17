@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/notes-keeper-backend"
+]
+resolver = "2"
