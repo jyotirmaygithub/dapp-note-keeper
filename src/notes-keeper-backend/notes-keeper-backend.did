@@ -1,1 +1,5 @@
-service : { greet : (text) -> (text) query }
+service : {
+  create_note : (text) -> ();
+  delete_note : (nat64) -> (vec text);
+  get_notes : () -> (vec text) query;
+}
