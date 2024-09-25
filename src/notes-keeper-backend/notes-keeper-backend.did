@@ -1,6 +1,6 @@
 service : {
   create_note : (text) -> ();
   delete_note : (nat64) -> (vec text);
-  get_notes : () -> (vec text) query;
+  get_notes : (nat64) -> (vec text) query;
   update_note : (nat64, text) -> (vec text);
 }

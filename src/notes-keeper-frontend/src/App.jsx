@@ -15,7 +15,7 @@ function App() {
   async function handleSubmit(){
     if(note.trim()){
       await notes_keeper_backend.create_note(note)
-      setAllNotes(await notes_keeper_backend.get_notes())
+      setAllNotes(await notes_keeper_backend.get_notes(3))
       setNote("");
     }
     else{
@@ -25,8 +25,7 @@ function App() {
 
   useEffect(()=>{
     async function toGetNotes() {
-    setAllNotes(await notes_keeper_backend.get_notes())
-    console.log("all notes = " , allNotes)
+    setAllNotes(await notes_keeper_backend.get_notes(3))
     }
     toGetNotes()
   },[])
