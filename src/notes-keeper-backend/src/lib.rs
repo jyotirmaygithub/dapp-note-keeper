@@ -18,6 +18,17 @@ fn get_notes() -> Vec<String> {
 }
 
 #[update]
+fn update_note(index: usize, text: String) -> Vec<String> {
+    unsafe {
+        if index < NOTE_ARRAY.len() {
+            ic_cdk::println!("text new one {} = ",text);
+            NOTE_ARRAY[index] = text;
+        }
+    }
+    unsafe { NOTE_ARRAY.clone() }
+}
+
+#[update]
 fn delete_note(index: usize) -> Vec<String> {
     unsafe {
         if index < NOTE_ARRAY.len() {
